@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "8.0.0",
+      "sem_ver" : "9.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "d99b253a8a4c83957a49eeb0df7e079b",
+      "MD5-CAM-1.0.1" : "5042e65fe1211493a35c3dfe686ef1ee",
       "PARENT:MD5-CAM-1.0.1" : "A60D0B7F52F1F9C3C9B3518DB83ACDAE"
     },
     "details" : {
@@ -5941,7 +5941,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0066.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -5957,7 +5956,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0060.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -5973,7 +5971,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0061.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -6292,7 +6289,116 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "BA764C976130B917F30B881297B90D5A"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen über die gemessene Flüssigkeitszufuhr, die häufig im Rahmen der Berechnung des Flüssigkeitshaushalts verwendet werden.",
+          "keywords" : [ "Flüssigkeit", "Gabe", "Haushalt", "Gleichgewicht", "Trinken", "Aufnahme", "Zufuhr", "parenteral", "Essen" ],
+          "use" : "Verwenden Sie diesen Archetyp, um Details zu aufgenommenen und / oder verabreichten Flüssigkeiten darzustellen.\r\n\r\nDieser Archetyp soll verwendet werden, um die aktuelle klinische Praxis widerzuspiegeln, wenn die Flüssigkeitsgabe im Auftrag und in Flüssigkeitshaushalt-Diagrammen aufgezeichnet wird. In einem klinischen Geschäftssystem können Regeln die Automatisierung von Aufträgen mit Flüssigkeitsgabe unter Verwendung dieses Archetyps unterstützen und die doppelte Dateneingabe durch die Kliniker verhindern. Dieser Archetyp wird auch die Grundlage für die gesamte überwachte Flüssigkeitszufuhr sein, einschließlich der verordneten Flüssigkeiten und des Ad-hoc-Verbrauchs.\r\n\r\nDieser Archetyp wird verwendet, um Details über Folgendes aufzuzeichnen:\r\n- jede einzelne aufgenommene oder verabreichte Flüssigkeit, beispielsweise jede einzelne Tasse Tee oder ein Glas Wasser; oder\r\n- die gesamte Zufuhr einer Flüssigkeit über einen bestimmten Zeitraum, beispielsweise die Gesamtmenge von 0,9% NaCl, die über eine 8-stündige Schicht verabreicht wird.\r\n\r\nJede Flüssigkeitsmessung sollte mit einer separaten Instanz dieses Archetyps aufgezeichnet werden.\r\n\r\nDie Details, die unter Verwendung dieses Archetyps für die Flüssigkeitsgabe aufgezeichnet wurden, können die Berechnung des Flüssigkeitshaushalts beeinflussen.\r\n\r\nEin Diagramm über den Flüssigkeitshaushalt erfordert normalerweise eine Kombination aus mehreren Instanzen dieses Archetyps und mehreren Instanzen des Archetyps OBSERVATION.fluid_output, um alle verschiedenen Ein- und Ausgänge zu erfassen, sowie eine einzelne Instanz der OBSERVATION.fluid_balance, um den gesamten Flüssigkeitsstatus aufzuzeichnen.\r\n",
+          "misuse" : "Nicht zur Darstellung des Flüssigkeitsabgangs verwenden. Verwenden Sie zu diesem Zweck OBSERVATION.fluid_output.\r\n\r\nNicht für den Auftrag einer Flüssigkeitsverabreichung verwenden - Verwenden Sie INSTRUCTION.medication oder einen INSTRUCTION-Archetyp spezifisch für die Flüssigkeitsgabe.\r\n\r\nNicht zu verwenden, um Änderungen der Flüssigkeitsgabe zu beauftragen. Verwenden Sie zu diesem Zweck einen geeigneten INSTRUCTION-Archetyp.\r\n\r\nNicht zur Darstellung von Flüssigkeitshaushaltsberechnungen verwenden. Verwenden Sie zu diesem Zweck OBSERVATION.fluid_balance.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om uppmätt vätskeintag, som ofta används som en del i beräkningen av vätskebalansen.",
+          "keywords" : [ "vätska", "intag", "balans", "dricker", "intag", "parenteralt", "äter" ],
+          "use" : "Används för att registrera information om vätskor som intas eller administreras.\r\n\r\nAnvänds för att spegla nuvarande klinisk praxis av vätskeintag registrerad i ordinationer och i vätskebalansdiagram. I ett kliniskt system kan regler stödja automatisering av ordinationer av vätskeintag för att inte kliniker ska behöva mata in data flera gånger. Denna arketyp kommer också att ligga till grund för alla övervakade vätskeintag, inklusive ordination av vätskor och ad hoc-konsumtion.\r\n\r\nAnvänds för detaljer om:\r\n-varje enskild vätska som intas eller administreras, exempelvis varje kopp te eller glas vatten.\r\n-det totala vätskeintaget under en viss tid, exempelvis den totala mängden av 0,9% NaCl som administreras under ett 8-timmars omvårdnads-skift.\r\n\r\nVarje vätskemätning ska registreras separat i denna arketyp. De detaljer som registreras med denna arketyp kan delges till beräkningar av vätskebalansen.\r\n\r\nEtt vätskebalansdiagram kräver vanligtvis flera registreringar av denna arketyp samt flera av OBSERVATION.fluid_output-arketypen för att fånga alla olika intag och utsöndringar, plus en registrering av OBSERVATION.fluid_balance för att få fram den totala vätskestatusen.\r\n",
+          "misuse" : "Ska inte användas för att registrera vätskeutsöndring. För det ändamålet används OBSERVATION.fluid_output.\r\n\r\nSka inte användas för att ordinera administrering av vätska. För det ändamålet används INSTRUCTION.medication eller en specifik instruktion för vätskeintag.\r\n\r\nAnvänds inte för att ordinera förändringar i vätskeintaget, såsom vätskerestriktion. Använd en lämplig instruktion-arketyp för det ändamålet.\r\n\r\nAnvänds inte för att registrera vätskebalans-beräkningar. Använd OBSERVATION.fluid_balance för det ändamålet.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To record details of measured fluid input, often used as part of fluid balance calculation.(en)",
+          "keywords" : [ "*fluid(en)", "*input(en)", "*balance(en)", "*drinking(en)", "*intake(en)", "*parenteral(en)", "*eating(en)" ],
+          "use" : "*Use to record details about fluids ingested and/or administered. \r\n\r\nThis archetype is intended to be used to mirror current clinical practice with fluid input recorded in orders and in fluid balance charts. In a clinical system business rules can support automation of orders involving fluid input using this archetype to prevent the need for clinicians to duplicate data entry. This archetype will also be the basis for all monitored fluid intake, including ordered fluids and ad hoc consumption.\r\n\r\nThis archetype will used to record details about:\r\n- each single fluid ingested or administered, for example each individual cup of tea or glass of water; or \r\n- the total fluid input of a fluid over a specified period of time, for example the total amount of 0.9% NaCl administered over an 8 hour nursing shift.\r\n\r\nEach fluid measurement should be recorded using a separate instance of this archetype.\r\n\r\nThe details recorded using this fluid input archetype may inform fluid balance calculations.\r\n\r\nA fluid balance chart will typically require a combination of multiple instances of this archetype and multiple instances of OBSERVATION.fluid_output archetype to capture all of the various inputs and outputs, plus a single instance of the OBSERVATION.fluid_balance to record the overall fluid status.(en)",
+          "misuse" : "*Not to be used to record fluid output. Use OBSERVATION.fluid_output for this purpose.\r\n\r\nNot to be used to order fluid administration - use INSTRUCTION.medication or an INSTRUCTION specific for fluid intake.\r\n\r\nNot to be used to order changes in fluid input, such as fluid restriction. Use an appropriate INSTRUCTION archetype for this purpose.\r\n\r\nNot to be used to record fluid balance calculations. Use OBSERVATION.fluid_balance for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljerte opplysninger om væskeinntak, ofte brukt som del av utregning av væskebalanse.",
+          "keywords" : [ "væske", "inn/ut", "væskebalanse", "inntak", "væskeinntak", "drikke", "flytende", "drikkemengde" ],
+          "use" : "Brukes for å registrere detaljer om væske som er drukket eller administrert.\r\n\r\nDenne arketypen er tenkt brukt for å gjenspeile nåværende klinisk praksis, der væskeinntak registreres som forordninger i kurve og i væskeoversikter, som drikkelister. I et klinisk system, kan man benytte denne arketypen sammen med forretningslogikk for å støtte automatisk registrering, slik at brukere slipper dobbeltregistrering. Denne arketypen vil også være basis for alt væskeinntak, inkludert væske som er ordinert eller som drikkes fritt, som ved måltider.\r\n\r\nDenne arketypen vil bli brukt for å registrere detaljer om:\r\n- hvert enkelt væskeinntak drukket eller administrert, for eksempel hver enkelt kopp te eller glass vann, eller\r\n- den totale mengden væskeinntak via en enkelt kilde i et spesifisert intervall, for eksempel den samlede mengden 0,9% NaCl i løpet av en vakt.\r\n\r\nFor hver enkelt måling man registrerer bør man bruke en separat instans av denne arketypen.\r\n\r\nDetaljene om væskeinntak fra denne arketypen kan benyttes til å fylle ut et væskeregnskap.\r\n\r\nEt væskeregnskap vil trenge data fra multiple instanser av denne arketypen og multiple instanser av OBSERVATION.fluid_output (Norsk: Væsketap) for å fange opp alt av væskeinntak og væsketap, i tillegg til en enkelt instans av OBSERVATION.fluid_balance (Norsk: Væskebalanse) til bruk i en overordnet væskebalanse.",
+          "misuse" : "Skal ikke brukes for å registrere væsketap. Bruk OBSERVATION.fluid_output (Væsketap) til dette.\r\n\r\nSkal ikke brukes for å forordne væskeinntak. Bruk INSTRUCTION.medication (Legemiddelordinering) eller en spesifikk INTSTRUCTION-arketype for væskeinntak.\r\n\r\nSkal ikke brukes for å forordne endringer eller begrensninger i væskeinntak. Bruk en egnet INSTRUCTION-arketype til dette.\r\n\r\nSkal ikke brukes for å estimere væskebalanse. Bruk OBSERVATION.fluid_balance (Væskebalanse) til dette.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para el registro de la medición de ingreso de fluido como parte del cálculo del balance hídrico.",
+          "keywords" : [ "fluido", "líquido", "ingreso", "balance", "ingesta", "beber", "parenteral", "comer" ],
+          "use" : "Utilizado para registrar los detalles de los fluidos ingeridos y/o administrados.\r\n\r\nEste arquetipo tiene como propósito reproducir la práctica clínica actual para el registro de la entrada de fluidos en órdenes y en gráficos de balance de fluidos. En un sistema de reglas de negocios de sistemas clínicos la utilización de este arquetipo puede brindar apoyo para la automatización de órdenes que involucran el uso de entrada de fluidos sin que el clínico deba duplicar el ingreso de datos. Este arquetipo será también la base para toda entrada de fluidos que requiera monitoreo, incluyendo órdenes de fluidos y consumos ad hoc.\r\n\r\nEste arquetipo será utilizado para registrar los detalles de:\r\n-cada fluido individual ingerido o administrado, como por ejemplo cada taza individual de té o vaso de agua; o\r\n-el ingreso total de de un fluido durante un período especificado de tiempo, como por ejemplo la cantidad total de NaCl al 0.9% administrado durante un turno de enfermería de 8 horas.\r\n\r\nCada medición de fluido debe ser registrada mediante una instancia separada del presente arquetipo.\r\n\r\nLos detalles registrados utilizando este arquetipo pueden proveer información para el cálculo de balances de fluidos.\r\n\r\nUna gráfica de balance de fluidos típicamente requerirá una combinación de múltiples instancias del arquetipo OBSERVATION.fluid_output para capturar los diversos ingresos y egresos, sumando a un instancia única de OBSERVATION.fluid_balance para el registro del estado general de los fluidos.",
+          "misuse" : "No debe utilizarse para el registro de egreso de fluidos. Para dicho propósito debe utilizarse OBSERVATION.fluid_output.\r\n\r\nNo debe utilizarse para ordenar la administración de fluidos. Para dicho propósito debe utilizarse INSTRUCTION.medication o un arquetipo INSTRUCTION específico para el fluido ingresado.\r\n\r\nNo debe utilizarse para ordenar cambios en el ingreso de fluidos, como es el caso de una restricción de fluidos. Para dicho propósito debe utilizarse un arquetipo INSTRUCTION apropiado.\r\n\r\nNo debe utilizarse para registrar el balance de fluidos calculado. Utilizar OBSERVATION.fluid_balance para dicho propósito.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To record details of fluid input, often used as part of fluid balance estimation.(en)",
+          "keywords" : [ "*fluid(en)", "*fluid balance(en)", "*input output(en)", "*io(en)", "*input(en)" ],
+          "use" : "*Use to record details of fluid input as part of routine nursing care.\r\n\r\nUse to record details of individual fluid input activities, in order to allow fluid balance estimations. For example: \"Oral\", \"Cup of Tea\", 220ml; or 1 litre Normal Saline infusion.\r\n\r\nMay also be used to record descriptive assessments of input.\r\n\r\n(en)",
+          "misuse" : "*Do not use as a primary record of the administration of fluids e.g intravascular, dialyisis. May be used alongside administration recrods ,normally an ACTION.(en)",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details of measured fluid input, often used as part of fluid balance calculation.",
+          "keywords" : [ "fluid", "input", "balance", "drinking", "intake", "parenteral", "eating" ],
+          "use" : "Use to record details about fluids ingested and/or administered. \r\n\r\nThis archetype is intended to be used to mirror current clinical practice with fluid input recorded in orders and in fluid balance charts. In a clinical system business rules can support automation of orders involving fluid input using this archetype to prevent the need for clinicians to duplicate data entry. This archetype will also be the basis for all monitored fluid intake, including ordered fluids and ad hoc consumption.\r\n\r\nThis archetype will used to record details about:\r\n- each single fluid ingested or administered, for example each individual cup of tea or glass of water; or \r\n- the total fluid input of a fluid over a specified period of time, for example the total amount of 0.9% NaCl administered over an 8 hour nursing shift.\r\n\r\nEach fluid measurement should be recorded using a separate instance of this archetype.\r\n\r\nThe details recorded using this fluid input archetype may inform fluid balance calculations.\r\n\r\nA fluid balance chart will typically require a combination of multiple instances of this archetype and multiple instances of OBSERVATION.fluid_output archetype to capture all of the various inputs and outputs, plus a single instance of the OBSERVATION.fluid_balance to record the overall fluid status.",
+          "misuse" : "Not to be used to record fluid output. Use OBSERVATION.fluid_output for this purpose.\r\n\r\nNot to be used to order fluid administration - use INSTRUCTION.medication or an INSTRUCTION specific for fluid intake.\r\n\r\nNot to be used to order changes in fluid input, such as fluid restriction. Use an appropriate INSTRUCTION archetype for this purpose.\r\n\r\nNot to be used to record fluid balance calculations. Use OBSERVATION.fluid_balance for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.fluid_input.v1",
     "differential" : true,
@@ -6578,7 +6684,115 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "900D200A48DF10B0E444EF1B6253EFF6"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung von Faktoren, die zur Bewertung der Dekubitusgefahr verwendet werden und des daraus resultierenden Braden Scores.",
+          "keywords" : [ "Dekubitus, Druckbelastung, Geschwür, Braden, Erwachsene, Skala" ],
+          "use" : "Der Archetyp wird verwendet, um das Dekubitusrisiko von Erwachsenen und Kindern ab einem Altern von 5 Jahren zu bewerten.\r\n\r\nEs gibt zwei häufig verwendete Varianten - eine für die Anwendung im Krankenhaus sowie eine für die Anwendung zu Hause. Die Varianten unterscheiden sich in der Beschreibung des Datenelements 'Feuchtigkeit'.  Die Häufigkeit, mit der die Bettwäsche gewechselt werden muss, wird für die Anwendung zu Hause mit 'dreimal in 24 Stunden' beschrieben und für die Anwendung im Krankenhaus mit 'einmal pro Schicht'. Da beide Beschreibungen die selbe Bedeutung haben, wird in der deutschen Übersetzung (anders als in der englischen Originalversion) die Version verwendet, die im Krankenhaus angewendet wird.\r\n\r\nWährend openEHR Archetypen frei verfügbar sind, ist der Inhalt dieses Archetypen ist durch das Urheberrecht geschützt. Die Verwendung des Archetypen muss in Übereinstimmung mit den Bedingungen erfolgen, die durch die Eigentümerinnen des Urheberrechts festgelegt wurden.\r\n\r\nCopyright statement: Barbara Braden and Nancy Bergstrom, 1988 All rights reserved",
+          "misuse" : "Der Archetyp darf nicht ohne Kenntnisnahme der Bestimmungen durch das Urheberrecht verwendet werden. Weitere Informationen unter http://bradenscale.com/copyright.htm.\r\n\r\nDie Braden-Skala ist nicht für die Anwendung bei Kindern zwischen 21 Tagen und 5 Jahren bestimmt. Hier sollte ein für die pädiatrische Braden-Skala konzipierter Archetyp verwendet werden. \r\n\r\nDie Braden-Skala ist nicht für die Anwendung bei nicht bei Kindern unter 21 Tagen bestimmt. Hier sollte ein für die neonatale Braden-Skala konzipierter Archetyp verwendet werden. \r\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "Voidaan käyttää tallentamaan tietoja tekijöistä, joita käytetään painehaavojen kehittymisen riskin arvioimiseen, ja Braden Scale -kokonaispisteet.",
+          "keywords" : [ "paine, kipeä, haava, Braden, aikuinen, tulos, arviointi" ],
+          "use" : "Käytä arvioitaessa painehaavan kehittymisen riskiä aikuisväestössä tai 5-vuotiaiden ja sitä vanhempien lasten hoidossa sekä sairaalassa että kotikäytössä.\r\n\r\nKäytettävissä on kaksi yleistä vaihtoehtoa, joista toinen on tarkoitettu sairaalaan ja toinen kotikäyttöön. Ne eroavat toisistaan vain kosteustietoelementin kuvauksessa, jossa vuodevaatteiden muutoksen taajuutta kuvataan kotikäyttöön \"kolme kertaa vuorokaudessa\" tai \"kerran vuorokaudessa\" sairaalassa. Koska näillä kahdella kuvauksella on sama olennainen merkitys, tämä arkkityyppi on käyttänyt yleisimmin sovellettavaa sanamuotoa, joka perustuu kotikäyttöön.\r\n\r\nVaikka OpenEHR-arkkityypit ovat vapaasti käytettävissä avoimen lisenssin alla, tämän Braden Scale -arkettityypin erityinen sisältö on tekijänoikeussuojattu. Tämän arkkityypin käyttö toteutuksissa on noudatettava tekijänoikeuksien omistajien asettamia ehtoja.\r\n\r\nCopyright statement: Barbara Braden and Nancy Bergstrom, 1988 All rights reserved\r\n\r\nCopyright information: http://bradenscale.com/copyright.htm.",
+          "misuse" : "Ei saa käyttää, ellei tekijänoikeuksia ole noudatettu - katso http://bradenscale.com/copyright.htm.\r\n\r\nBraden-asteikkoa ei pitäisi käyttää lapsille, joiden ikä on 21 päivän ja 5 vuoden välillä. Käytä lapsille tarkoitettua Paediatric Braden Scale -arkkityyppiä.\r\n\r\nBraden Scalea ei tule käyttää alle 21-vuotiaille lapsille. Käytä vastasyntyneille kehitettyä  Neonatal Braden Scale -arkkityyppiä.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere informasjon om risikofaktorer for utvikling av trykksår, samt utregning av totalskår.\r\n",
+          "keywords" : [ "trykk, sår, braden, skår, score, vurdering, decubitus, dekubitus, dekutbitalsår, ernæring, mobilitet, hud, forflytning, forebygging, risikofaktorer, liggesår" ],
+          "use" : "Brukes for å vurdere risiko for utvikling av trykksår hos voksne eller hos barn som er 5 år eller eldre både i spesialist- og i primærhelsetjenesten. Den publiserte skalaen har to varianter, en for sykehus og en for bruk i hjemmet. Disse har kun små forskjeller i beskrivelsen i dataelementet \"Fuktighet\" hvor foreslått frekvens av sengetøyskift er satt til \"tre ganger per 24 timer\" for hjemmebruk og \"en gang per vakt\" for sykehusbruk. Da de to beskrivelsene har samme meningsinnhold, baseres denne arketypen på varianten for hjemmebruk da denne har den mest generiske ordlyden.\r\n\r\nopenEHR-arketyper er fritt tilgjengelige under en åpen lisens, men det spesifikke innholdet i denne Braden-skala-arketypen er opphavsrettslig beskyttet. All bruk av denne arketypen i implementasjoner må gjøres i henhold til vilkår gitt av innehaverne av opphavsretten.\r\n\r\nErklæring om opphavsrett: Barbara Braden and Nancy Bergstrom, 1988 All rights reserved.\r\n\r\nInformasjon om opphavsretten: http://bradenscale.com/copyright.htm.",
+          "misuse" : "Braden-skala skal ikke brukes med mindre opphavsrettsbetingelsene er oppfylt - for detaljer se: \r\nhttp://bradenscale.com/copyright.htm.\r\n\r\nBraden-skala skal ikke benyttes for barn som er mellom 21 dager og 5 år gamle. Bruk egen arketype for Pediatrisk Braden-skala for dette formålet.\r\n\r\nBraden-skala skal ikke benyttes for barn som er yngre enn 21 dager gamle - Bruk egen arketype for Neonatal Braden-skala for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Registrar información acerca de los factores utilziados para evaluar el riesgo de desarrollo de úlceras de decúbito, con el puntaje total de la Escala de Braden.",
+          "keywords" : [ "decúbito, escara, úlcera, Braden, adulto, puntaje, evaluación" ],
+          "use" : "Utilizar para evaluar el riesgo de desarrollo de úlceras por decúbito en poblaciones adultas y en niños de 5 o más años de edad, tanto en el hospital como en la comunidad.\r\nExisten dos variantes comunmente utilizadas: una esta dirigida al uso hospitalario y otra para el uso en el hogar. SOlo difieren en la descripción del dato Humedad. donde la frecuencia de cambio de la ropa de cama se decribe como \"tres veces en 24 horas\" para el uso en el hogar y \"una vez por turno\" para el uso hospitalario. Como estas dos descripciones tienen el esencialmente el mismo significado, este arquetipo utiliza el fraseo mas generalmente aplicado, basado en la variante de uso en el hogar.\r\nEn tanto que los arquetipos openEHR se encuentran libremente disponibles bajo una licencia abierta, el contenido específico de la escala de Braden se encuentra protegido por un derecho de autor. Cualquier uso de este arquetipo en una implementación debe cumplir con los términos establecidos por los titulares del derecho de autor.\r\nDeclaración de derecho de autor: Barbara Braden y Nancy Bergstrom, 1988 Todos los derechos reservados.\r\nInformación sobre el derecho de autor: http://bradenscale.com/copyright.htm",
+          "misuse" : "No utilizar excepto se hayan cumplimentado los término del derecho de autor - ver http://bradenscale.com/copyright.htm para detalles.\r\nLa Escala de Braden no debe ser utilizada en niños entre 21 días y cinco años de edad. Utilizar un arquetipo especialmente diseñado para la Escala de Braden Pediátrica.\r\nLa Escala de Braden no debe ser utilizada en niños menores de 21 días de edad. Utilizar un arquetipo especialmente diseñado para la Escala de Braden Neonatal.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar informações sobre os fatores utilizados para avaliar o risco de desenvolvimento de úlceras por pressão e a pontuação total da Escala de Braden.",
+          "keywords" : [ "pressão, ferida, úlcera, Braden, adulto, score, avaliação" ],
+          "use" : "Use para avaliar o risco de desenvolvimento de úlceras por pressão em uma população adulta ou para crianças com 5 anos ou mais, tanto em ambientes hospitalares quanto em comunitários.\r\n\r\nExistem duas variantes comumente utilizadas - uma destinada a uso hospitalar e outra a uso doméstico. Elas diferem apenas na descrição do elemento de dados de umidade onde a frequência de mudança de cama é descrita como \"três vezes em 24 horas\" para uso doméstico ou \"uma vez por turno\" para uso hospitalar. Como estas duas descrições tem o mesmo significado essencial, este arquétipo usou a formulação mais aplicável, baseada na variante de uso doméstico.\r\n\r\nEnquanto os arquétipos openEHR estão todos disponíveis gratuitamente sob uma licença aberta, o conteúdo específico deste arquétipo de Escala de Braden é protegido por direitos autorais. Qualquer uso deste arquétipo dentro de implementações deve estar em conformidade com os termos estabelecidos pelos proprietários de direitos autorais.\r\n\r\nDeclaração de direitos autorais: Barbara Braden and Nancy Bergstrom, 1988 All rights reserved\r\n\r\nInformações sobre direitos autorais: http://bradenscale.com/copyright.htm",
+          "misuse" : "Não deve ser utilizado a menos que os termos dos direitos autorais tenham sido observados - consulte os detalhes em http://bradenscale.com/copyright.htm. \r\n\r\nA escala de Braden não deve ser utilizada para crianças entre 21 dias e 5 anos. Use um arquétipo projetado especificamente para a escala de Braden Pediátrica.\r\n\r\nA escala de Braden não deve ser utilizada para ser utilizada para crianças menores de 21 dias. Use um arquétipo projetado especificamente para a escala de Braden Neonatal.\r\n\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record information about factors used to assess the risk of pressure ulcer development, and the total Braden Scale score.",
+          "keywords" : [ "pressure", "sore", "ulcer", "Braden", "adult", "score", "assessment" ],
+          "use" : "Use to assess risk of pressure ulcer development in an adult population or for children aged 5 and over, in both hospital and community settings.\r\n\r\nThere are two commonly used variants - one intended for hospital use and the other for home use. They differ only in the description of the Moisture data element where the frequency of bedding change is described as \"three times per 24 hours\" for home use or \"once per shift\" for hospital use. As these two descriptions have the same essential meaning, this archetype has used the most generally applicable wording, based on the home use variant.\r\n\r\nWhile openEHR archetypes are all freely available under an open license, the specific content of this Braden Scale archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. \r\n\r\nCopyright statement: Barbara Braden and Nancy Bergstrom, 1988 All rights reserved\r\n\r\nCopyright information: http://bradenscale.com/copyright.htm.",
+          "misuse" : "Not to be used unless the terms of copyright have been observed -see http://bradenscale.com/copyright.htm for details.\r\n\r\nThe Braden Scale should not be used for children between 21 days and 5 years. Use an archetype specifically designed for the Paediatric Braden Scale.\r\n\r\nThe Braden Scale should not be used for children aged less than 21 days. Use an archetype specifically designed for the Neonatal Braden Scale.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "旨在记录那些有关用于评估压疮发生风险的因素的信息以及布雷登量表总分。",
+          "keywords" : [ "压力", "压迫", "疮", "溃疡", "压疮", "压力性溃疡", "褥疮", "布雷登", "Braden", "布拉登", "布莱登", "贝登", "量表", "布雷登量表", "Braden量表", "布拉登量表", "布莱登量表", "贝登量表", "布雷登压疮评估量表", "布雷登压疮风险预测量表", "布雷登压疮危险因素预测量表", "成年人", "成年", "成人", "评分", "分数", "得分", "分值", "评估", "评价" ],
+          "use" : "用于评估成年人群或5岁及以上儿童在医院和社区环境中发生压疮的风险。\r\n\r\n布雷登量表有两种常用的变体，即医院版和居家版。二者的区别仅仅是对于潮湿数据元素的描述；其中，二者对于床单更换频率的描述分别为医院版的“每班一次”和居家版的“每24小时三次”。这两种描述本质上的含义相同，因此，本原始型采用的是最为普遍适用的居家版措辞。\r\n\r\n所有的openEHR原始型按开放许可协议均为免费提供，但这个布雷登量表原始型的具体内容却受版权保护。实施项目之中对于该原始型的任何应用必须遵循版权所有方所确定的条款。\r\n\r\n版权声明：Barbara Braden和Nancy Bergstrom，版权所有 © 1988\r\n版权信息：http://bradenscale.com/copyright.htm。\r\n",
+          "misuse" : "除非遵守版权条款，否则不得使用 – 有关详细信息，请参阅http://bradenscale.com/copyright.htm。\r\n\r\n不应当布雷登量表用于21天至5岁的儿童。请采用专为儿科布雷登量表而设计的原始型。\r\n\r\n不应当布雷登量表用于21天以下的儿童。请采用专为新生儿布雷登量表而设计的原始型。\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.braden_scale.v1",
     "differential" : true,
